@@ -1,11 +1,11 @@
 @import "twitter/bootstrap/bootstrap";
-body { padding-top: 60px; }
-body { 
+body { padding-top: 85px; }
+/*body { 
 	padding-top: 60px;
 	padding-left: 20px;
-}
+}*/
 
-@import "twitter/bootstrap/responsive";
+/*@import "twitter/bootstrap/responsive";*/
 
 // Set the correct sprite paths
 @iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png');
@@ -32,3 +32,33 @@ body {
 //
 // Example:
 // @linkColor: #ff0000;
+.navbar-inner{
+	background: #060606;
+}
+
+@textColor: @white;
+
+#menu {
+	clear: right;
+}
+
+div.product_item {
+	width: 133px;
+	margin-right: 10px;
+	background-color: #ffffff;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+div.product_item .title {
+	width: 100%;
+	display: block;
+	letter-spacing: 0;
+	font-size: 12px;
+	height: 18px;
+	overflow: hidden;
+}
+div.product_item .caption {
+	font-size: 10px;
+	color: #000000;
+}

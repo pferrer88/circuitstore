@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 gem 'rails', '3.2.1'
-gem 'sqlite3'
+# gem 'sqlite3'
+gem 'pg', :group => :production
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -22,3 +23,10 @@ gem "rolify", ">= 3.1.0"
 gem "twitter-bootstrap-rails", ">= 2.0.3", :group => :assets
 gem "therubyracer", :group => :assets, :platform => :ruby
 gem "simple_form"
+
+gem 'activeadmin', :git => "git://github.com/gregbell/active_admin.git"
+# gem "squeel"
+gem "carrierwave"
+gem "mini_magick"
+gem 'faker'
+gem "kaminari"

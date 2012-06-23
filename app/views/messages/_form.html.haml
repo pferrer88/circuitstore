@@ -1,0 +1,8 @@
+= simple_form_for @message, :html => { :class => 'form-horizontal' } do |f|
+  = f.input :name
+  = f.input :company
+  = f.input :email
+  = f.input :comment
+  .form-actions
+    = f.button :submit, :class => 'btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), messages_path, :class => 'btn'

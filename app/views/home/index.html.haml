@@ -1,3 +1,62 @@
-%h3 Home
-- @users.each do |user|
-  %p User: #{link_to user.name, user}
+#slideshow.row
+	.span12
+	
+		#featured.carousel.slide
+			.carousel-inner
+				.item.active
+					%img{:src =>"/overflow.jpg", :alt=>"Overflow: Hidden No More"}
+				.item
+					%img{:src=>"/captions.jpg", :alt=>"HTML Captions"}	
+				.item
+					%img{:src=>"/features.jpg", :alt=>"and more features"}
+			%a.carousel-control.left{:href =>"#featured", :data=>{:slide =>"prev"}} <
+			%a.carousel-control.right{:href =>"#featured", :data=>{:slide =>"next"}} >
+			
+			
+#featured_cats.row
+	.span12
+		%h1 New Products
+	.span6
+		%h2 New Consoles
+		- @games.each do |p|
+			.product_item.pull-left
+				- if p.foto.url
+					%a{:href => url_for(p)}
+						= image_tag p.foto_url, :size => "133x75" if p.foto
+						.caption
+							.title= p
+							.pull-left
+								=p.code[0...4]
+							.pull-right
+								= "$" + (p.price[0...4]).to_s
+				- else
+					%a{:href => url_for(p)}
+						%img{:src => "http://placehold.it/133x75", :alt=>""}
+						.caption
+							.title= p
+							.pull-left
+								=p.code[0...4]
+							.pull-right
+								= "$" + (p.price[0...4]).to_s
+	.span6
+		%h2 New Games
+		- @consoles.each do |p|
+			.product_item.pull-left
+				- if p.foto.url
+					%a{:href => url_for(p)}
+						= image_tag p.foto_url, :size => "133x75" if p.foto
+						.caption
+							.title= p
+							.pull-left
+								=p.code[0...4]
+							.pull-right
+								= "$" + (p.price[0...4]).to_s
+				- else
+					%a{:href => url_for(p)}
+						%img{:src => "http://placehold.it/133x75", :alt=>""}
+						.caption
+							.title= p
+							.pull-left
+								=p.code[0...4]
+							.pull-right
+								= "$" + (p.price[0...4]).to_s
