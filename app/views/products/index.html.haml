@@ -6,7 +6,7 @@
 	.product_item.pull-left
 		- if p.foto.url
 			%a{:href => url_for(p)}
-				= image_tag p.foto_url(:small_thumb), :size => "133x75" if p.foto
+				= image_tag p.foto_url, :size => "133x75" if p.foto
 				.caption
 					.title= p
 					.pull-left
